@@ -5,7 +5,6 @@
 .masthead {
   position: relative;
   border-bottom: 1px solid $border-color;
-  background-color: white;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
@@ -27,7 +26,7 @@
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
-      max-width: $x-large;
+      max-width: $max-width;
     }
 
     nav {
@@ -41,8 +40,7 @@
 }
 
 .site-logo img {
-  margin-right: 0.5rem;
-  max-height: 4rem;
+  max-height: 2rem;
 }
 
 .site-title {
@@ -52,7 +50,12 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
-  z-index: 20;
+  // z-index: 20;
+}
+
+.site-subtitle {
+  display: block;
+  font-size: $type-size-8;
 }
 
 .masthead__menu {
@@ -71,26 +74,20 @@
   }
 
   ul {
-    clear: both;
     margin: 0;
     padding: 0;
+    clear: both;
     list-style-type: none;
-
-    @include breakpoint($medium) {
-      height: $nav-height;
-      line-height: $nav-height;
-    }
   }
+}
 
-  a {
-    color: $masthead-link-color;
+.masthead__menu-item {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
 
-    &:hover {
-      color: $masthead-link-color-hover;
-    }
-  }
-
-  .dropdown-menu {
-    height: auto;
+  &--lg {
+    padding-right: 2em;
+    font-weight: 700;
   }
 }
