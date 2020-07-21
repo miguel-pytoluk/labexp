@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: "pt-BR"
-title: labexp
+title: LabXP
 masthead_title: " "
 email:
 logo: "/assets/images/logo-p-1.png"
@@ -70,7 +70,7 @@ footer:
       url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/lab_xp"
 
 defaults:
   # _posts
