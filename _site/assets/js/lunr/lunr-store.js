@@ -41,10 +41,40 @@ var store = [{
         "url": "http://localhost:4000/LabXP/blog/welcome-to-jekyll/",
         "teaser": null
       },{
+        "title": "Alguem (3rd copy)",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/residentes/alguem%20(3rd%20copy)/",
+        "teaser": null
+      },{
+        "title": "Alguem (another copy)",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/residentes/alguem%20(another%20copy)/",
+        "teaser": null
+      },{
+        "title": "Alguem (copy)",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/residentes/alguem%20(copy)/",
+        "teaser": null
+      },{
         "title": "Alguem",
         "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/LabXP/residentes/alguem/",
+        "teaser": null
+      },{
+        "title": "Julia (another copy)",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Casamentiss faiz malandris se pirulitá.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/residentes/julia%20(another%20copy)/",
+        "teaser": null
+      },{
+        "title": "Julia (copy)",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Casamentiss faiz malandris se pirulitá.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/residentes/julia%20(copy)/",
         "teaser": null
       },{
         "title": "Julia",

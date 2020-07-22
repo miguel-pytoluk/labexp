@@ -161,7 +161,21 @@
 
 
     <div class="initial-content">
-      
+      <head>
+  <style>
+    .title-div{
+      width: fit-content;
+      border: 0.1em solid white;
+      padding: 0.1em 0.3em 0.3em 0.3em;
+    }
+    @media only screen and (min-width: 285px) {
+  	  .title-div {
+    	    margin-left: 1em;
+  	  }
+	}
+  </style>
+</head>
+
 
 
 
@@ -178,8 +192,8 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Residentes
-</h1>
+          <h1 id="page-title" class="page__title" itemprop="headline"><div class="title-div">Residentes
+</div></h1>
           
         </header>
       
@@ -188,36 +202,83 @@
         
         <head>
   <style>
-  	.residente-foto {
-  	  border-radius: 50%;
-  	  object-fit: cover;
-	  width: 200px;
-	  height: 200px;
+  	.residentes-container {
+  	  display: flex;
+  	  flex-wrap: wrap;
+  	  border: 0.15em solid white;
+  	  padding-top: 2.5em;
+  	  margin-top: -1.5em;
   	}
+  	@media only screen and (max-width: 284px) {
+  	  .residentes-container {
+    	    justify-content: center;
+  	  }
+	}
   	.residente-block {
   	  display: inline-block;
+  	  margin: 0 0.75em;
+
+  	}
+	.res-foto-div{
+	  display: flex;
+    	  justify-content: center;
+	}
+  	.residente-titulo {
+  	  text-align: center;
+  	  margin-top: 0.5em;
+  	  width: 100px;
+  	}
+  	.residente-foto {
+  	  display: block;
+  	  object-fit: cover;
+	  width: 100px;
+	  height: 100px;
+  	  margin: 0 auto;
+  	  border: 0.3em solid white;
+  	}
+  	.residente-dados {
+  	  width:100%;
   	}
   </style>
 </head>
+<div class="residentes-container">
 
-<div class="residente-block">
-    <img class="residente-foto" src="assets/images/alguem.jpg" />
-  </div>
-<div class="residente-block">
-    <h2>Alguém Especial - Musicista</h2>
-    <p><p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.</p>
-</p>
-  </div>
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/alguem.jpg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+    </div>  
 
-<div class="residente-block">
-    <img class="residente-foto" src="assets/images/julia.jpeg" />
-  </div>
-<div class="residente-block">
-    <h2>Julia Santos - Artista Visual</h2>
-    <p><p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Casamentiss faiz malandris se pirulitá.</p>
-</p>
-  </div>
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/alguem.jpg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+    </div>  
 
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/alguem.jpg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+    </div>  
+
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/alguem.jpg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+    </div>  
+
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/julia.jpeg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+    </div>  
+
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/julia.jpeg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+    </div>  
+
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/julia.jpeg" />
+      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+    </div>  
+
+</div>
 
         
       </section>
