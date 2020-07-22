@@ -40,4 +40,16 @@ var store = [{
         "tags": ["Jekyll","update"],
         "url": "http://localhost:4000/blog/welcome-to-jekyll/",
         "teaser": null
-      }]
+      },{
+        "title": "Alguem",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/residentes/alguem/",
+        "teaser": null
+      },{
+        "title": "Julia",
+        "excerpt":"Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Casamentiss faiz malandris se pirulitá.  ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/residentes/julia/",
+        "teaser": null
+      },]
