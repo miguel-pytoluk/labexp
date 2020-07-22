@@ -10,11 +10,18 @@ title: "Residentes"
 	  width: 200px;
 	  height: 200px;
   	}
+  	.residente-block {
+  	  display: inline-block;
+  	}
   </style>
 </head>
 {% for residente in site.residentes %}
-  <img class="residente-foto" src="{{ relative_url }}assets/images/{{ residente.foto }}">
-  <h2>{{ residente.nome }} - {{ residente.funcao }}</h2>
-  <p>{{ residente.content | markdownify }}</p>
+  <div class="residente-block">
+    <img class="residente-foto" src="{{ relative_url }}assets/images/{{ residente.foto }}">
+  </div>
+  <div class="residente-block">
+    <h2>{{ residente.nome }} - {{ residente.funcao }}</h2>
+    <p>{{ residente.content | markdownify }}</p>
+  </div>
   
 {% endfor %}
