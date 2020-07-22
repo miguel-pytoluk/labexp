@@ -13,7 +13,7 @@ title: "Residentes"
   </style>
 </head>
 {% for residente in site.residentes %}
-  <img class="residente-foto" src="/assets/images/residentes/{{ residente.foto }}">
+  <img class="residente-foto" src="{{ page.url }}assets/images/{{ residente.foto }}">
   <h2>{{ residente.nome }} - {{ residente.funcao }}</h2>
   <p>{{ residente.content | markdownify }}</p>
   
