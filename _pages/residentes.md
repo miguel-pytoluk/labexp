@@ -37,6 +37,7 @@ title: "Residentes"
 	  height: 100px;
   	  margin: 0 auto;
   	  border: 0.3em solid white;
+  	  background-color: white;
   	}
   	.residente-dados {
   	  width:100%;
