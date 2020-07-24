@@ -49,6 +49,7 @@ title: "Residentes"
   	a:hover{
   	  color: #47081f;
   	}
+  	
   </style>
 </head>
 <div class="residentes-container">
