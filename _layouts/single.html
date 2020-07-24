@@ -18,16 +18,26 @@ layout: default
 	    width: 100%;
 	    padding-right: 0px;
 	}
-	#page-sobre.md {
-	    width: calc(100%-300px);
-	    padding-right: 300px;
+	#page-sobre {
+	    width: calc(100% - 150px);
+	    padding-right: 150px;
 	}
     }
+    #header-Sobre {
+      border: 0.1em solid white;
+      margin-left: 0.35em;
+      width: 25em;
+    }
     #page-title-Sobre {
+      margin-left: -0.3em;
       margin-bottom: 0em;
     }
     #tit-div-Sobre{
-      width: 10.1em;
+      width: 10.13em;
+      border-left: 0.08em solid white;
+      border-right: 0.08em solid white;
+      border-top: 0;
+      border-bottom: 0;
     }
   </style>
 </head>
@@ -46,7 +56,7 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" id="page-{{ page.name }}" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page" id="page-{{ page.name | remove: ".md" }}" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
@@ -54,7 +64,7 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
+        <header id="header-{{ page.title }}">
           {% if page.title %}<h1 id="page-title-{{ page.title }}" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-{{ page.title }}">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}{% if page.title == "Sobre"%} o LabXP{% endif %}</div></h1>{% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>

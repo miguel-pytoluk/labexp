@@ -94,7 +94,15 @@
 
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/LabXP/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/LabXP/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/LabXP/favicon-16x16.png">
+<link rel="manifest" href="/LabXP/site.webmanifest">
+<link rel="mask-icon" href="/LabXP/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/LabXP/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/LabXP/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 <!-- end custom head snippets -->
 
@@ -191,16 +199,26 @@
 	    width: 100%;
 	    padding-right: 0px;
 	}
-	#page-sobre.md {
-	    width: calc(100%-300px);
-	    padding-right: 300px;
+	#page-sobre {
+	    width: calc(100% - 150px);
+	    padding-right: 150px;
 	}
     }
+    #header-Sobre {
+      border: 0.1em solid white;
+      margin-left: 0.35em;
+      width: 25em;
+    }
     #page-title-Sobre {
+      margin-left: -0.3em;
       margin-bottom: 0em;
     }
     #tit-div-Sobre{
-      width: 10.1em;
+      width: 10.13em;
+      border-left: 0.08em solid white;
+      border-right: 0.08em solid white;
+      border-top: 0;
+      border-bottom: 0;
     }
   </style>
 </head>
@@ -304,7 +322,7 @@
 
     <div class="page__inner-wrap">
       
-        <header>
+        <header id="header-Post: Modified Date">
           <h1 id="page-title-Post: Modified Date" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Post: Modified Date">Post: Modified Date
 </div></h1>
           

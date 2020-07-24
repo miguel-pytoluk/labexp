@@ -90,7 +90,15 @@
 
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="/LabXP/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/LabXP/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/LabXP/favicon-16x16.png">
+<link rel="manifest" href="/LabXP/site.webmanifest">
+<link rel="mask-icon" href="/LabXP/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/LabXP/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/LabXP/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 <!-- end custom head snippets -->
 
@@ -187,16 +195,26 @@
 	    width: 100%;
 	    padding-right: 0px;
 	}
-	#page-sobre.md {
-	    width: calc(100%-300px);
-	    padding-right: 300px;
+	#page-sobre {
+	    width: calc(100% - 150px);
+	    padding-right: 150px;
 	}
     }
+    #header-Sobre {
+      border: 0.1em solid white;
+      margin-left: 0.35em;
+      width: 25em;
+    }
     #page-title-Sobre {
+      margin-left: -0.3em;
       margin-bottom: 0em;
     }
     #tit-div-Sobre{
-      width: 10.1em;
+      width: 10.13em;
+      border-left: 0.08em solid white;
+      border-right: 0.08em solid white;
+      border-top: 0;
+      border-bottom: 0;
     }
   </style>
 </head>
@@ -208,7 +226,7 @@
   
 
 
-  <article class="page" id="page-404.md" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page" id="page-404" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Página Não Encontrada">
     <meta itemprop="description" content="Página não econtrada. Encontrará o que procuras, mas não aqui e agora.">
     
@@ -216,7 +234,7 @@
 
     <div class="page__inner-wrap">
       
-        <header>
+        <header id="header-Página Não Encontrada">
           <h1 id="page-title-Página Não Encontrada" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Página Não Encontrada">Página Não Encontrada
 </div></h1>
           
@@ -225,7 +243,7 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Perdão, mas a página que tu estás tentando visualizar não existe — talvez possas tentar procurar utilizando nossa ferramenta de busca.</p>
+        <p>Perdão, mas a página que está tentando visualizar não existe — pode tentar procurar utilizando nossa ferramenta de busca.</p>
 
 <script>
   var GOOG_FIXURL_LANG = 'pt-BR';
