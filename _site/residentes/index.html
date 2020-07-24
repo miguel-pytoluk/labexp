@@ -117,6 +117,15 @@
     .site-logo img {
     	max-height: 4rem;
     }
+    .navicon, .navicon:before, .navicon:after, .greedy-nav__toggle:hover .navicon, .greedy-nav__toggle:hover .navicon:before, .greedy-nav__toggle:hover .navicon:after, .greedy-nav .visible-links a:before {
+      background: white;
+    }
+    .icon {
+      fill: white;
+    }
+    a:focus, button:focus{
+      outline: 5px auto white;
+    }
   </style>
 </head>
 <div class="masthead" style="background-color: #141010;">
@@ -207,21 +216,23 @@
   	  grid-template-columns: repeat(auto-fill, 130px); /* 2 */
   	  grid-gap: 1rem; /* 3 */
   	  justify-content: space-evenly; /* 4 */
-  	  border: 0.15em solid white;
+  	  border: 0.1em solid white;
   	  padding-top: 2.5em;
   	  margin-top: -1.5em;
+  	  padding-bottom: 0.5em;
   	}
   	.residente-block {
   	  display: inline-block;
   	  margin: 0 0.75em;
   	}
-	.res-foto-div{
+	.res-titulo-div{
 	  display: flex;
     	  justify-content: center;
 	}
   	.residente-titulo {
   	  text-align: center;
   	  margin-top: 0.5em;
+  	  margin-bottom: 0.1em;
   	  width: 100px;
   	}
   	.residente-foto {
@@ -236,8 +247,14 @@
   	.residente-dados {
   	  width:100%;
   	}
+  	.redes{
+  	  text-align: center;
+  	}
   	a, a:visited{
   	  color:white;
+  	}
+  	a:hover{
+  	  color: #47081f;
   	}
   </style>
 </head>
@@ -245,8 +262,9 @@
 
     <div class="residente-block">
       <img class="residente-foto" src="assets/images/alguem.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+      <div class="res-titulo-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
       <div class="redes">
+      	
       	
       	
       </div>
@@ -254,8 +272,11 @@
 
     <div class="residente-block">
       <img class="residente-foto" src="assets/images/alguem.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+      <div class="res-titulo-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
       <div class="redes">
+      	
+      	
+      	<a href="https://facebook.com/joazin"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
       	
       	
       </div>
@@ -263,7 +284,7 @@
 
     <div class="residente-block">
       <img class="residente-foto" src="assets/images/alguem.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
+      <div class="res-titulo-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
       <div class="redes">
       	
       	<a href="https://instagram.com/joao"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
@@ -271,26 +292,19 @@
       	
       	<a href="https://facebook.com/joao"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
       	
-      </div>
-    </div>  
-
-    <div class="residente-block">
-      <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
-      <div class="redes">
       	
-      	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	
+      	<a href="https://twitter.com/joao"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
       	
       </div>
     </div>  
 
     <div class="residente-block">
       <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
       <div class="redes">
       	
       	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+      	
       	
       	
       </div>
@@ -298,10 +312,11 @@
 
     <div class="residente-block">
       <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
       <div class="redes">
       	
       	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+      	
       	
       	
       </div>
@@ -309,11 +324,26 @@
 
     <div class="residente-block">
       <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-foto-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
       <div class="redes">
       	
       	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
       	
+      	
+      	
+      </div>
+    </div>  
+
+    <div class="residente-block">
+      <img class="residente-foto" src="assets/images/julia.png" />
+      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
+      <div class="redes">
+      	
+      	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+      	
+      	
+      	
+      	<a href="https://twitter.com/juju"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
       	
       </div>
     </div>  
