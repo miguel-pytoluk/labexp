@@ -19,6 +19,12 @@ layout: default
 	    padding-right: 0px;
 	}
     }
+    #page-title-Sobre {
+      margin-bottom: 0em;
+    }
+    #tit-div-Sobre{
+      width: 10.1em;
+    }
   </style>
 </head>
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -45,7 +51,7 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.title %}<h1 id="page-title" class="page__title" itemprop="headline"><div class="title-div">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</div></h1>{% endif %}
+          {% if page.title %}<h1 id="page-title-{{ page.title }}" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-{{ page.title }}">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}{% if page.title == "Sobre"%} o LabXP{% endif %}</div></h1>{% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
