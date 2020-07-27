@@ -63,10 +63,10 @@ plugins:
 
 footer:
   links:
-    - label: "Instagram"
+    - label: ""
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/lab_xp"
-    - label: "Mixcloud"
+    - label: ""
       icon: "fab fa-fw fa-mixcloud"
       url: "https://mixcloud.com/labxpcontent"
 
