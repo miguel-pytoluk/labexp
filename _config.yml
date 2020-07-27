@@ -71,17 +71,6 @@ footer:
       url: "https://instagram.com/lab_xp"
 
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: "_pages"
@@ -89,6 +78,16 @@ defaults:
     values:
       layout: single
       author_profile: false
+  # _entrevistas
+  - scope:
+      path: "_entrevistas"
+      type: entrevistas
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: true
+      share: true
 
 category_archive:
   type: liquid
@@ -98,7 +97,12 @@ tag_archive:
   path: /tags/
 
 collections:
-  - entrevistas
-  - series
-  - residentes
-  - sobre
+  entrevistas:
+    output: true
+    permalink: /:collection/:path/
+  series:
+    output: false
+  residentes:
+    output: false
+  sobre:
+    output: false

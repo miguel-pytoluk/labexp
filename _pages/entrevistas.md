@@ -1,6 +1,6 @@
 ---
 title: "Entrevistas"
 permalink: /entrevistas/
-layout: posts
-author_profile: true
+layout: entrevistas
+collection: entrevistas
 ---

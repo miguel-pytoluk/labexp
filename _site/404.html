@@ -345,7 +345,14 @@
       height: 3em;
       width: 22.5em;
       min-width: 33vw;
-      padding-left: 0.75em
+      padding-left: 0.75em;
+      line-height: 3em;
+    }
+    @media only screen and (min-width: 1366px) {
+      input, textarea, select {
+        min-width: 0;
+        width: 450px;
+      }
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: #141010;
@@ -371,6 +378,55 @@
     .social-icons .fa-instagram, .social-icons .fa-rss, .social-icons .fa-rss-square {
       color: white;
     }
+    .cursor {
+     position: relative;
+    }
+    .cursor i {
+      position: absolute;
+      width: 3px;
+      height: 0.6em;
+      margin-left: 11.2em;
+      margin-top: 0.66em;
+      background-color: black;
+      left: 5px;
+      top: 10%;
+      animation-name: blink;
+      animation-duration: 800ms;
+      animation-iteration-count: infinite;
+      opacity: 1;
+    }
+     @media only screen and (max-width: 1279px) and (min-width: 768px) {
+       .cursor i {
+         margin-left: 10.9em;
+       }
+       input, textarea, select {
+         padding-top: 0.78em;
+       }
+     }
+     @media only screen and (max-width: 1023px) {
+       .cursor i {
+         margin-left: 11em;
+       }
+     }
+     @media only screen and (max-width: 767px) {
+      .cursor i {
+         margin-left: 10.7em;
+         margin-right: 7em;
+         text-align: right;
+      }
+      input, textarea, select {
+         padding-top: 0.4em;
+       }
+    }
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0; }
+    }
+    .cursor input:focus + i {
+      display: none;
+    }
+
+
   </style>
 </head>
 <div class="footer-grid">
@@ -394,7 +450,10 @@
 </div>
   <div class="mail_copy">
     <form action="https://getform.io/f/7d102948-ed6f-4198-83db-35e898f97190" method="POST">
-      <input type="email" name="email" placeholder="Preencha com seu email e receba LabXP_news">
+      <div class="cursor">
+        <input type="email" name="email" placeholder="Preencha com seu email e receba LabXP_news">
+        <i></i>
+      </div>
     </form>
     <div class="page__footer-copyright">&copy; 2020 LabXP. Site por <a href="https://miguel.dev.br">miguel.dev.br</a> </div>
   </div>
