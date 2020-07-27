@@ -337,30 +337,90 @@
     }
     .page__footer footer {
       margin-top: 1em;
-      padding-bottom: 1em;
+      padding-bottom: 0;
+    }
+    .footer-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .page__footer-follow, .page__footer-copyright{
+      width: fit-content;
+    }
+    .page__footer-follow{
+      margin-left: 0.25em;
+    }
+    .mail_copy{
+      justify-self: right;
+      margin-right:0.5em;
+    }
+    form{
+     padding: 0;
+     margin-bottom: 0;
+    }
+    input, textarea, select {
+      background-color: white;
+      margin-top: 0.95em;
+      margin-bottom: 0.4em;
+      color: #141010;
+      font-size: 0.5rem;
+      font-weight: bold;
+      height: 3em;
+      width: 22.5em;
+      min-width: 33vw;
+      padding-left: 0.75em
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #141010;
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: red;
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: red;
+    }
+    .page__footer-follow li {
+      font-size: 1.25em;
+    }
+    .page__footer-copyright{
+      justify-self: right;
+      text-align: right;
+      margin-left: auto;
+      font-size: 0.5em;
+    }
+    .social-icons .fa-instagram, .social-icons .fa-rss, .social-icons .fa-rss-square {
+      color: white;
     }
   </style>
 </head>
+<div class="footer-grid">
 <div class="page__footer-follow">
   <ul class="social-icons">
 
     
       
         
-          <li><a href="https://instagram.com/lab_xp" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> </a></li>
+          <li><a href="https://mixcloud.com/labxpcontent" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-mixcloud" aria-hidden="true"></i> </a></li>
         
       
         
-          <li><a href="https://mixcloud.com/labxpcontent" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-mixcloud" aria-hidden="true"></i> </a></li>
+          <li><a href="https://instagram.com/lab_xp" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> </a></li>
         
       
     
 
-    <li><a href="/LabXP/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i></a></li>
+    <li><a href="/LabXP/feed.xml"><i class="fas fa-fw fa-rss" aria-hidden="true"></i></a></li>
   </ul>
 </div>
-
-<div class="page__footer-copyright">&copy; 2020 LabXP </div>
+  <div class="mail_copy">
+    <form action="https://getform.io/f/7d102948-ed6f-4198-83db-35e898f97190" method="POST">
+      <input type="email" name="email" placeholder="Preencha com seu email e receba LabXP_news">
+    </form>
+    <div class="page__footer-copyright">&copy; 2020 LabXP </div>
+  </div>
+</div>
 
       </footer>
     </div>

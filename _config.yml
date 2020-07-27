@@ -64,11 +64,11 @@ plugins:
 footer:
   links:
     - label: ""
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/lab_xp"
-    - label: ""
       icon: "fab fa-fw fa-mixcloud"
       url: "https://mixcloud.com/labxpcontent"
+    - label: ""
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/lab_xp"
 
 defaults:
   # _posts
