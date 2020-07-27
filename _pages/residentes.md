@@ -43,11 +43,8 @@ title: "Residentes"
   	.redes{
   	  text-align: center;
   	}
-  	a, a:visited{
+  	a, a:visited, a:hover{
   	  color:white;
-  	}
-  	a:hover{
-  	  color: #47081f;
   	}
   	
   </style>

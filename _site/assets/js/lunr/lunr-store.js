@@ -82,4 +82,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/LabXP/residentes/julia/",
         "teaser": null
-      },]
+      },{
+        "title": "Bruno",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/sobre/bruno/",
+        "teaser": null
+      },{
+        "title": "Fulana",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/LabXP/sobre/fulana/",
+        "teaser": null
+      }]
