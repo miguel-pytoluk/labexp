@@ -22,6 +22,11 @@ layout: default
 	    width: calc(100% - 150px);
 	    padding-right: 150px;
 	}
+	#page-series {
+	    width: calc(100% - 50px);
+	    padding-right: 25px;
+	    padding-left: 100px;
+	}
     }
     #header-Sobre {
       border: 0.1em solid white;
@@ -32,11 +37,21 @@ layout: default
       margin-left: -0.3em;
       margin-bottom: 0em;
     }
+    #page-title-Séries {
+      margin-left: -0.3em;
+      margin-bottom: 0em;
+    }
     #tit-div-Sobre{
       width: 11.07em;
       border-left: 0.06em solid white;
       border-right: 0.06em solid white;
       border-top: 0;
+      border-bottom: 0;
+    }
+    #tit-div-Séries{
+      padding-left: 1em;
+      width: 6.5em;
+      border: 0.06em solid white;
       border-bottom: 0;
     }
     @media only screen and (max-width: 768px) {
@@ -71,7 +86,7 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header id="header-{{ page.title }}">
-          {% if page.title %}<h1 id="page-title-{{ page.title }}" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-{{ page.title }}">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}{% if page.title == "Sobre"%} o LabXP{% endif %}</div></h1>{% endif %}
+          {% if page.title %}<h1 id="page-title-{{ page.title }}" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-{{ page.title }}">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}{% if page.title == "Sobre"%} o LabXP{% endif %}{% if page.title == "Séries"%}_lab{% endif %}</div></h1>{% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}

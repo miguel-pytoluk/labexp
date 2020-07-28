@@ -18,7 +18,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="LabXP">
 <meta property="og:title" content="Página Não Encontrada">
-<meta property="og:url" content="http://localhost:4000/LabXP/404.html">
+<meta property="og:url" content="http://192.168.15.23:4000/LabXP/404.html">
 
 
   <meta property="og:description" content="Página não econtrada. Encontrará o que procuras, mas não aqui e agora.">
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/LabXP/404.html">
+<link rel="canonical" href="http://192.168.15.23:4000/LabXP/404.html">
 
 
 
@@ -45,7 +45,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://localhost:4000/LabXP/"
+      "url": "http://192.168.15.23:4000/LabXP/"
     
   }
 </script>
@@ -202,6 +202,11 @@
 	    width: calc(100% - 150px);
 	    padding-right: 150px;
 	}
+	#page-series {
+	    width: calc(100% - 50px);
+	    padding-right: 25px;
+	    padding-left: 100px;
+	}
     }
     #header-Sobre {
       border: 0.1em solid white;
@@ -212,11 +217,21 @@
       margin-left: -0.3em;
       margin-bottom: 0em;
     }
+    #page-title-Séries {
+      margin-left: -0.3em;
+      margin-bottom: 0em;
+    }
     #tit-div-Sobre{
       width: 11.07em;
       border-left: 0.06em solid white;
       border-right: 0.06em solid white;
       border-top: 0;
+      border-bottom: 0;
+    }
+    #tit-div-Séries{
+      padding-left: 1em;
+      width: 6.5em;
+      border: 0.06em solid white;
       border-bottom: 0;
     }
     @media only screen and (max-width: 768px) {
@@ -244,8 +259,7 @@
     <div class="page__inner-wrap">
       
         <header id="header-Página Não Encontrada">
-          <h1 id="page-title-Página Não Encontrada" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Página Não Encontrada">Página Não Encontrada
-</div></h1>
+          <h1 id="page-title-Página Não Encontrada" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Página Não Encontrada">Página Não Encontrada</div></h1>
           
         </header>
       
@@ -256,7 +270,7 @@
 
 <script>
   var GOOG_FIXURL_LANG = 'pt-BR';
-  var GOOG_FIXURL_SITE = 'http://localhost:4000'
+  var GOOG_FIXURL_SITE = 'http://192.168.15.23:4000'
 </script>
 
 <script src="https://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
@@ -335,7 +349,7 @@
      margin-bottom: 0;
      background-color: #141010;
     }
-    input, textarea, select {
+    .cursor input {
       background-color: white;
       margin-top: 0.80em;
       margin-bottom: 0.4em;
@@ -349,7 +363,7 @@
       line-height: 3em;
     }
     @media only screen and (min-width: 1366px) {
-      input, textarea, select {
+      .cursor input {
         min-width: 0;
         width: 450px;
       }
@@ -360,11 +374,11 @@
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: red;
+      color: #141010;
     }
 
     ::-ms-input-placeholder { /* Microsoft Edge */
-      color: red;
+      color: #141010;
     }
     .page__footer-follow li {
       font-size: 1.25em;
@@ -383,6 +397,7 @@
     }
     .cursor i {
       position: absolute;
+      display: none;
       width: 3px;
       height: 0.6em;
       margin-left: 11.2em;
@@ -395,12 +410,9 @@
       animation-iteration-count: infinite;
       opacity: 1;
     }
-     @media only screen and (max-width: 1279px) and (min-width: 768px) {
+     @media only screen and (max-width: 1279px) and (min-width: 768px)  {
        .cursor i {
          margin-left: 10.9em;
-       }
-       input, textarea, select {
-         padding-top: 0.78em;
        }
      }
      @media only screen and (max-width: 1023px) {
@@ -414,7 +426,7 @@
          margin-right: 7em;
          text-align: right;
       }
-      input, textarea, select {
+      .cursor input {
          padding-top: 0.4em;
        }
     }
@@ -422,10 +434,8 @@
       from { opacity: 1; }
       to { opacity: 0; }
     }
-    .cursor input:focus + i {
-      display: none;
-    }
-
+    .cursor input:placeholder-shown + i { display: inline-block; } /* Cursor só aparece quando placeholder aparece */
+    .cursor input:focus + i { display: none; } /* Cursor não aparece quando o input é selecionado, mesmo com o placeholder */
 
   </style>
 </head>

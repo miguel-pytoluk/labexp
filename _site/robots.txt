@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/LabXP/sitemap.xml
+Sitemap: http://192.168.15.23:4000/LabXP/sitemap.xml

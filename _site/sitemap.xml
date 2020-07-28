@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/LabXP/entrevistas/2019-04-18-welcome-to-jekyll/</loc>
+<loc>http://192.168.15.23:4000/LabXP/entrevistas/2019-04-18-welcome-to-jekyll/</loc>
 <lastmod>2019-04-18T16:34:30-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/entrevistas/</loc>
+<loc>http://192.168.15.23:4000/LabXP/entrevistas/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/</loc>
+<loc>http://192.168.15.23:4000/LabXP/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/residentes/</loc>
+<loc>http://192.168.15.23:4000/LabXP/residentes/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/series/</loc>
+<loc>http://192.168.15.23:4000/LabXP/series/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/sobre/</loc>
+<loc>http://192.168.15.23:4000/LabXP/sobre/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/tags/</loc>
+<loc>http://192.168.15.23:4000/LabXP/tags/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/LabXP/</loc>
+<loc>http://192.168.15.23:4000/LabXP/</loc>
 </url>
 </urlset>
