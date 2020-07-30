@@ -1,0 +1,27 @@
+# slider zopelar
+- selector: zopelar_slider
+  captions: false
+  images:
+    - src: https://noize.com.br/wp-content/uploads/2020/02/1_.png
+      alt: 1
+    - src: http://noize.com.br/wp-content/uploads/2020/02/2_.png
+      alt: 2
+    - src: http://noize.com.br/wp-content/uploads/2020/02/3_.png
+      alt: 3
+    - src: http://noize.com.br/wp-content/uploads/2020/02/4_.png
+      alt: 4
+    - src: http://noize.com.br/wp-content/uploads/2020/02/5_.png
+      alt: 5
+    - src: http://noize.com.br/wp-content/uploads/2020/02/6_.png
+      alt: 6
+    - src: http://noize.com.br/wp-content/uploads/2020/02/8.png
+      alt: 7
+    - src: http://noize.com.br/wp-content/uploads/2020/02/9_.png
+      alt: 8
+    - src: http://noize.com.br/wp-content/uploads/2020/02/12_.png
+      alt: 9
+    - src: http://noize.com.br/wp-content/uploads/2020/02/13.png
+      alt: 10
+  settings:
+    height: "'auto'"
+    effect: "'fade'"

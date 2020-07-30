@@ -20,6 +20,11 @@ title: "Séries"
     .serie_principal_titulo{
       padding-top: 0.25em;
       padding-left: 1em;
+      font-weight: bold;
+    }
+    .cascata, .fa-angle-down{
+      position: absolute;
+      display:none;
     }
     .nav_e_video_serie, .artistas_serie{
       display: grid;
@@ -31,12 +36,10 @@ title: "Séries"
       border: 0.1em solid white;
       border-top: 0;
       min-height: 11em;
+      max-width: 10.16em;
     }
     .series-navitem{
       margin-top: 1em;
-    }
-    .series-navitem a {
-      font-weight: bold;
     }
     a, a:visited, a:hover{
       color:white;
@@ -97,14 +100,92 @@ title: "Séries"
     .artistas_lista a, .art_foto_div a{
       text-decoration: none;
     }
+    @media only screen and (max-width: 768px) {
+      .tit_serie_principal {
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+      .fa-angle-down{
+        display: block;
+        margin-left: -0.45em;
+        margin-top: 0.45em;
+      }
+      .cascata {
+        position: absolute;
+        display: block;
+      }
+      .serie_principal_div_vazia{
+        display: none;
+      }
+      .serie_principal_titulo{
+        border-left: 0.1em solid white;
+        margin-left: 0.75em;
+      }
+      .serie_nav{
+        background-color: #141010;
+        display:none;
+        position: absolute;
+        z-index: 1;
+        margin: 0 auto;
+      }
+      .video-container{
+        margin-left: -0.1em;
+        margin-right: 1em;
+      }
+      .texto-serie{
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+      .artistas_presentes{
+        padding-top: .75em;
+        padding-bottom: 1em;
+      }
+      .artistas_serie{
+        margin: 2em 1em 0 1em;
+      }
+      .nav_e_video_serie, .artistas_serie{
+        grid-template-columns: auto;
+      }
+      .artistas_fotos_e_lista{
+        padding: 1em 0 0 0;
+      }
+      .art_foto_div a h5{
+        font-size: 0.7rem;
+      }
+      .artistas_lista a h5{
+        font-size: 0.6rem;
+      }
+      .artistas_fotos{
+        grid-template-columns: 29.5% 29.5% 29.5%;
+        column-gap: 1em;
+      }
+      .artista_foto{
+        height: 3em;
+        width: 100%;
+      }
+    }
   </style>
+  <script>
+    function mostrarNav() {
+      var x = document.getElementById("serie_nav");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+          x.style.display = "block";
+          x.style.marginLeft = "-0.1em";
+      }
+     }
+  </script>
 </head>
 <div class="tit_serie_principal">
+  <a class="cascata" href="javascript:void(0);" onclick="mostrarNav()"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
   <div class="serie_principal_div_vazia"></div>
   <div class="serie_principal_titulo">_Sessões Tronco</div>
 </div>
 <div class="nav_e_video_serie">
-  <nav class="serie_nav">
+  <nav class="serie_nav" id="serie_nav">
     <ul>
       <li class="series-navitem"><a href="#">_Outra série</a></li>
       <li class="series-navitem"><a href="#">_Mais uma série</a></li>

@@ -107,10 +107,10 @@ var store = [{
         "url": "http://192.168.15.23:4000/LabXP/artistas/21/",
         "teaser": null
       },{
-        "title": "Welcome to Jekyll!",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": [],
+        "title": "Pedro Zopelar e seu “Joy Of Missing Out”",
+        "excerpt":"Terceiro trabalho solo de Pedro Zopelar, Joy of Missing Out é fruto de um processo livre de experimentação, que resulta em beats feitos a partir de samples e pequenos recortes da pesquisa que o músico, baseado em São Paulo, costuma ouvir em casa. Com lançamento marcado para amanhã, 4 de...","categories": [],
         "tags": [],
-        "url": "http://192.168.15.23:4000/LabXP/entrevistas/2019-04-18-welcome-to-jekyll/",
+        "url": "http://192.168.15.23:4000/LabXP/entrevistas/2020-02-03-Pedro-Zopelar-e-seu-Joy-Of-Missing-Out/",
         "teaser": null
       },{
         "title": "Alguem (another copy)",
