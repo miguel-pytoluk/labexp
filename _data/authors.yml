@@ -1,0 +1,14 @@
+Bruno Barros:
+  name        : "Bruno Barros"
+  bio         : "Bruno Barros é produtor de conteúdo independente. Tem se dedicado na formação do LabXP, um núcleo de produção de conteúdo e cultural."
+  avatar      : "/assets/images/Bruno-Barros_avatar.png"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:billyrick@rick.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://thewhip.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/extravagantman"

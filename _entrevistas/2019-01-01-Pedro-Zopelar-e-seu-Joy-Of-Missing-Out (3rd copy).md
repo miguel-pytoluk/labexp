@@ -1,5 +1,5 @@
 ---
-title: "Pedro Zopelar e seu “Joy Of Missing Out”"
+title: "E assim só vai"
 author: Bruno Barros
 fotos: Álvaro Bernardi / LabXP
 date: 2020-02-03T00:00:00-00:00

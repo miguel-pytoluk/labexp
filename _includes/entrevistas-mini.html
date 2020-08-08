@@ -1,0 +1,79 @@
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign capa = post.capa %}
+<style>
+  .entr-mini-grid{
+    display: grid;
+    height: 5.5rem;
+    margin: 0.75rem 0 0 7.75rem;
+    grid-template-columns: 12.4rem  34.5rem;
+  }
+  .entr-mini-data-titulo{
+    border: 0.15rem solid white;
+    border-right: none;
+    padding: 0.75rem 0.5rem 0 0.75rem;
+  }
+  .page__content .entr-mini-data-titulo p {
+      font-family: 'Domine', serif;
+      font-size: 0.8rem;
+      font-weight: normal;
+      margin: 0;
+  }
+  .entr-mini-titulo{
+      margin: 0;
+      font-size: 1.1rem;
+  }
+  .entr-mini-img{
+    border: 0.15rem solid white;
+    max-height: 5.5rem;
+  }
+  .entr-mini-img img{
+    width: 100%;
+    margin-top: -0.02rem;
+    max-height: 5.2rem;
+    object-fit: cover;
+    z-index: -1;
+    background-color: white;
+  }
+  .entr-mini-ret-separa{
+    border: 0.15rem solid white;
+    border-top: none;
+    border-bottom: none;
+    height: 2.5rem;
+    width: 12.55rem;
+    margin: -1rem 0 0 7.75rem;
+  }
+  @-moz-document url-prefix() {
+    .entr-mini-img img{
+      margin-top: 0rem;
+    }
+    .entr-mini-ret-separa{
+      width: 12.5rem;
+    }
+  }
+</style>
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      <div class="entr-mini-grid">
+        <div class="entr-mini-data-titulo">
+          <p class="entr-mini-data">{{ post.date | date: "%d_%m_%Y"  }}</p>
+          <h4 class="entr-mini-titulo">{{ title }}</p>
+        </div>
+        <div class="entr-mini-img"><img src="{{ relative_url }}assets/images/{{ capa }}" alt=""></div>
+      </div>
+      <a href="{{ post.url | relative_url }}" rel="permalink"></a>
+    </h2>
+  </article>
+</div>
+<div class="entr-mini-ret-separa"></div>

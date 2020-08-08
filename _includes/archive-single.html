@@ -11,25 +11,127 @@
 {% endif %}
 
 {% assign capa = post.capa %}
-
+<link href="https://fonts.googleapis.com/css2?family=Domine&amp;display=swap" rel="stylesheet" />
+<style>
+  .page__content .archive__item-title{
+    margin-top: -0.625em;
+  }
+  .entr-header-grid{
+      display: grid;
+      grid-template-columns: 1.22em 10.97em  auto;
+      width: 28.85em;
+      margin: -0.8em 0 0 14.9em;
+    }
+    .entr-data-titulo, .entr-bod-ret-vazio-peq , .entr-bod-ret-vazio-gd, .entr-fotos-share{
+      border: 0.15rem solid white;
+    }
+    .entr-data-titulo{
+      border-top: none;
+      padding: 0 0 0.5em 0.5em;
+      height: 13em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .page__content .entr-data-titulo p {
+      font-family: 'Domine', serif;
+      font-size: 0.8rem;
+      font-weight: normal;
+      margin: 0;
+    }
+    .entr-titulo{
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .transparencia-preta{
+      background: rgba(20,16,16,0.6);
+      z-index: -1;
+    }
+    .entr-bod-ret-vazio-peq{
+      border-right: none;
+      border-top: none;
+    }
+    .entr-bod-ret-vazio-gd{
+      border-left: none;
+      border-top: none;
+    }
+    .entr-foto{
+      position: absolute;
+      height: 12.92em;
+      width: 28.75em;
+      object-fit: cover;
+      top: 0;
+      left: 15em;
+      margin-bottom: -15.51em;
+      z-index: -2;
+    }
+    .entr-descr-grid{
+      display: grid;
+      grid-template-columns: 10.97em  auto;
+      width: 27.63em;
+      margin: 0em 0 0 16.12em;
+    }
+    .entr-fotos-share{
+      border-top: none;
+      padding: 0.5em 0.5em 0 0.5em;
+    }
+    .archive__item-title a + a {
+      opacity: 1;
+    }
+    .entre-share{
+      display: flex;
+      height: calc(100% - 1.75em);
+    }
+    .page__content .entr-fotos-share p{
+      font-family: 'Domine', serif;
+      font-size: 0.75rem;
+      font-weight: normal;
+      margin: 0;
+    }
+    .entr-descr{
+      font-family: 'Domine', serif;
+      font-size: 0.8rem;
+      font-weight: normal;
+      padding: 1em 0 0 1em;
+    }
+    .entr-descr p, .entr-descr strong{
+      display: inline;
+    }
+    a, a:visited, a:hover, a:active{
+      text-decoration: none !important;
+    }
+</style>
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
     {% endif %}
     <h2 class="archive__item-title no_toc" itemprop="headline">
-      <img src="{{ relative_url }}assets/images/{{ capa }}" alt="">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
+      <a href="{{ post.url | relative_url }}"> <!-- rel="permalink" para links que ocupam todo o espaço -->
+        <div class="entr-relative-masta">
+          <div class="entr-header-grid">
+            <div class="entr-bod-ret-vazio-peq"></div>
+            <div class="entr-data-titulo transparencia-preta">
+              <p class="entr-data">{{ post.date | date: "%d_%m_%Y"  }}</p>
+              <h4 class="entr-titulo">{{ title }}</p>
+            </div>
+            <div class="entr-bod-ret-vazio-gd"></div>
+          </div>
+          <img class="entr-foto" src="{{ relative_url }}assets/images/{{ capa }}" alt="">
+        </div>
+      </a>
+      <div class="entr-descr-grid">
+        <div class="entr-fotos-share">
+          <p class="entre-autor">Por {{ post.author }}</p>
+          {% if post.fotos %}<p class="entre-fotos">Fotos de {{ post.fotos }}</p>{% endif %}
+          <div class="entre-share">{% include social-share.html %}</div>
+        </div>
+        <div class="entr-descr">
+          {{ post.excerpt | replace:'href="','ignore="'}} <a href="{{ post.url | relative_url }}"><strong>Leia na íntegra.</strong></a>
+        </div>
+      </div>
     </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
   </article>
 </div>

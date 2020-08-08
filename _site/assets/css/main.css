@@ -10,7 +10,7 @@
 .ais-search-box .ais-search-box--input { background-color: #110e0e; }
 
 /*!
- * Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+ * Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
  * Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
@@ -1004,6 +1004,8 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .page__meta a, .comment__date a { color: inherit; }
 
 .page__meta-title { margin-bottom: 10px; font-size: 0.75em; text-transform: uppercase; }
+
+.post__meta-sep::before { content: "\2022"; padding-left: 0.5em; padding-right: 0.5em; }
 
 /* Page taxonomy ========================================================================== */
 .page__taxonomy .sep { display: none; }

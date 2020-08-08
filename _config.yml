@@ -102,9 +102,13 @@ collections:
     permalink: /:collection/:path/
   series:
     output: false
+    search: false
   artistas:
     output: false
+    search: false
   residentes:
     output: false
+    search: false
   sobre:
     output: false
+    search: false

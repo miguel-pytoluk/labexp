@@ -1,5 +1,5 @@
 ---
-title: "Pedro Zopelar e seu “Joy Of Missing Out”"
+title: "Mais uma entrevista com outra Pessoa"
 author: Bruno Barros
 fotos: Álvaro Bernardi / LabXP
 date: 2020-02-03T00:00:00-00:00

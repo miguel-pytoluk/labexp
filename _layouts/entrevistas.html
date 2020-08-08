@@ -8,6 +8,22 @@ layout: single
   a, a:visited, a:hover, a:active  {
     color: white;
   }
+  .entr-ret-separa{
+      border: 0.15rem solid white;
+      border-bottom:none;
+      height: 5.5rem;
+      width: 12.55rem;
+      margin: -1.1rem 0 0 7.75rem;
+    }
+    @-moz-document url-prefix() {
+      .entr-ret-separa{
+        width: 12.5rem;
+      }
+    }
+    .entr-ret-separa-fim{
+      border: 0.15rem solid white;
+      border-top:none;
+    }
   </style>
 </head>
 {% if paginator %}
@@ -17,9 +33,14 @@ layout: single
 {% endif %}
 
 <div class="entries-{{ page.entries_layout | default: 'list' }}">
-  {% for post in posts %}
-    {% include archive-single.html type=page.entries_layout %}
+  {% for post in posts reversed %}
+    {% if forloop.index == 1 %}{% include archive-single.html type=page.entries_layout %}{% endif %}
   {% endfor %}
+  <div class="entr-ret-separa"></div>
+  {% for post in posts reversed %}
+    {% if forloop.index > 1 %}{% include entrevistas-mini.html type=page.entries_layout %}{% endif %}
+  {% endfor %}
+  <div class="entr-ret-separa entr-ret-separa-fim"></div>
 </div>
 
 {% include paginator.html %}

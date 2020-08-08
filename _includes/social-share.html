@@ -1,0 +1,43 @@
+<head>
+  <style>
+    .page__share{
+      align-self: flex-end;
+    }
+    .compartilhe-div{
+      display: flex;
+    }
+    .page__share-title{
+      margin: 0;
+    }
+    .soc_media_botoes{
+      margin: -0.3em 0.5em 0 0.5em;
+    }
+    a, a:visited, a:hover{
+  	  color:white;
+    }
+    .page__share{
+      margin-top: 0;
+      border-top: 0;
+    }
+    .page .page__inner-wrap .page__share{
+      float: none;
+    }
+    .page__share-title {
+      text-transform: none;
+    }
+  </style>
+</head>
+<section class="page__share">
+  <div class="compartilhe-div">
+  {% if site.data.ui-text[site.locale].share_on_label %}
+    <h4 class="page__share-title">{{ site.data.ui-text[site.locale].share_on_label | default: "Share on" }}</h4>
+  {% endif %}
+  <div class="soc_media_botoes">
+  <a href="https://twitter.com/intent/tweet?{% if site.twitter.username %}via={{ site.twitter.username | url_encode }}&{% endif %}text={% if post.title %}{{ post.title | url_encode }}{% else %}{{ page.title | url_encode }}{% endif %}%20{% if post.url %}{{ post.url | absolute_url | url_encode }}{% else %}{{ page.url | absolute_url | url_encode }}{% endif %}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u={% if post.url %}{{ post.url | absolute_url | url_encode }}{% else %}{{ page.url | absolute_url | url_encode }}{% endif %}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url={% if post.url %}{{ post.url | absolute_url | url_encode }}{% else %}{{ page.url | absolute_url | url_encode }}{% endif %}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
+  </div>
+  </div>
+</section>
