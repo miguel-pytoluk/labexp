@@ -300,7 +300,7 @@
       border: 0.15em solid white;
       border-bottom: none;
       border-top: none;
-      padding: 0 0 0 0.5em;
+      padding: 0 0 1.25em 0.5em;
       height: 14em;
       display: flex;
       flex-direction: column;
@@ -310,10 +310,13 @@
         background: rgba(20,16,16,0.6);
         z-index: -1;
     }
-    .entr-post-bod-ret-vazio-peq, .entr-post-bod-ret-vazio-gd{
+    .entr-post-bod-ret-vazio-peq, .entr-post-bod-ret-vazio-gd, .entr-post-bod-ret-mobile-gd, .entr-post-bod-ret-mobile-pq{
       border: 0.15em solid white;
       border-left: none;
       border-top: none;
+    }
+    .entr-post-bod-ret-mobile-gd, .entr-post-bod-ret-mobile-pq{
+      display: none;
     }
     .entr-post-data, .entre-autor, .entre-fotos{
       font-family: 'Domine', serif;
@@ -441,33 +444,63 @@
         margin-left: 26.67em;
       }
       /*entrevistas*/
-      #page-title-EntrevistasPost{
-        grid-template-columns: 7em 0.8em auto;
+      #page-title-Entrevistas{
+        grid-template-columns: auto 0.8em;
         width: 100%;
         margin-left: 0em;
       }
+      .entr-tit-ret-vazio-md, .entr-tit-ret-vazio-gd{
+        display: none;
+      }
+      #page-title-EntrevistasPost{
+        grid-template-columns: auto 0.8em;
+        width: 100%;
+        margin-left: 0em;
+      }
+      .entr-post-tit-ret-vazio-gd{
+        display: none;
+      }
       .entr-post-header-grid{
-        grid-template-columns: 10.95em 1.25em auto;
+        grid-template-columns: auto 1.25em;
         width: 100%;
         margin: -0.8em 0 0 0em;
       }
+      .entr-post-bod-ret-mobile-gd, .entr-post-bod-ret-mobile-pq{
+        height: 7em;
+        display: block;
+      }
+      .entr-post-bod-ret-mobile-gd {
+        border-left: 0.1em solid white;
+      }
       .entr-post-data-titulo{
+        height: 5.25em;
         border-bottom: 0.15em solid white;
+        padding: 0 1em 0.25em 1.75em;
+      }
+      .entr-post-bod-ret-vazio-gd{
+        display: none;
       }
       .entre-autoria-share{
         left: 0em;
+        width: 100%;
+        margin-top: -1.75em;
+        padding: 0.25em 0.5em 0.1em 1.75em;
+      }
+      .entre-share {
+        padding-top: 0em;
       }
       .capa-foto{
         left: 0em;
+        height: 12.15em;
       }
       #section_entrevistas{
         width: 100%;
-        margin-top: 7.5rem;
+        margin-top: 5.05rem;
         margin-left: 0em;
       }
       .page .page__inner-wrap .page__meta{
-      width: 100%;
-      margin-left: 0em;
+        width: 100%;
+        margin-left: 0em;
       }
       .page .page__inner-wrap .footer-share .page__share{
         width: 100%;
@@ -479,6 +512,9 @@
         top: -2em;
         left: calc(100% - 3.9em);
       }
+      .sqr{
+      display: none;
+     }
     }
   </style>
   
@@ -510,9 +546,11 @@
   
   <div class="entr-relative-masta">
 	<div class="entr-post-header-grid">
+    <div class="entr-post-bod-ret-mobile-gd"></div>
+	  <div class="entr-post-bod-ret-mobile-pq"></div>
 	  <div class="entr-post-data-titulo transparencia-preta">
 	    <p class="entr-post-data">02_02_2020</p>
-	    <h4 class="entr-post-titulo">Mais uma entrevista com outra Pessoa</p>
+	    <h4 class="entr-post-titulo">Mais uma entrevista com outra Pessoa</h4>
 	  </div>
 	  <div class="entr-post-bod-ret-vazio-peq"></div>
 	  <div class="entr-post-bod-ret-vazio-gd"></div>

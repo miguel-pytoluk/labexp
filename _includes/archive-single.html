@@ -22,7 +22,7 @@
       width: 28.85em;
       margin: -0.8em 0 0 14.9em;
     }
-    .entr-data-titulo, .entr-bod-ret-vazio-peq , .entr-bod-ret-vazio-gd, .entr-fotos-share{
+    .entr-data-titulo, .entr-bod-ret-vazio-peq , .entr-bod-ret-vazio-gd, .entr-fotos-share, .entr-bod-ret-mobile-gd, .entr-bod-ret-mobile-pq{
       border: 0.15rem solid white;
     }
     .entr-data-titulo{
@@ -47,13 +47,17 @@
       background: rgba(20,16,16,0.6);
       z-index: -1;
     }
-    .entr-bod-ret-vazio-peq{
-      border-right: none;
+    .entr-bod-ret-vazio-peq, .entr-bod-ret-vazio-gd, .entr-bod-ret-mobile-gd, .entr-bod-ret-mobile-pq{
       border-top: none;
     }
-    .entr-bod-ret-vazio-gd{
+    .entr-bod-ret-vazio-peq{
+      border-right: none;
+    }
+    .entr-bod-ret-mobile-pq, .entr-bod-ret-vazio-gd {
       border-left: none;
-      border-top: none;
+    }
+    .entr-bod-ret-mobile-gd, .entr-bod-ret-mobile-pq{
+      display: none;
     }
     .entr-foto{
       position: absolute;
@@ -100,6 +104,38 @@
     a, a:visited, a:hover, a:active{
       text-decoration: none !important;
     }
+    @media only screen and (max-width: 768px) {
+      .entr-header-grid{
+        grid-template-columns: auto 1em;
+        width: 100%;
+        margin: -0.8em 0 0 0;
+      }
+      .entr-bod-ret-vazio-peq{
+        display: none;
+      }
+      .entr-bod-ret-mobile-gd, .entr-bod-ret-mobile-pq{
+        height: 7em;
+        display: block;
+      }
+      .entr-data-titulo, .entr-bod-ret-vazio-gd{
+        height: 5em;
+      }
+      .entr-data-titulo{
+        padding-left: 1.25em;
+      }
+      .entr-foto{
+        height: 11.92em;
+        left: 0;
+      }
+      .entr-descr-grid{
+        grid-template-columns: 100%;
+        width: 100%;
+        margin: 0;
+      }
+      .entr-descr{
+        padding: 1em 1em 1.25em 1em;
+    }
+    }
 </style>
 <div class="{{ include.type | default: "list" }}__item">
     <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
@@ -112,6 +148,8 @@
       <a href="{{ post.url | relative_url }}"> <!-- rel="permalink" para links que ocupam todo o espaço -->
         <div class="entr-relative-masta">
           <div class="entr-header-grid">
+            <div class="entr-bod-ret-mobile-gd"></div>
+	          <div class="entr-bod-ret-mobile-pq"></div>
             <div class="entr-bod-ret-vazio-peq"></div>
             <div class="entr-data-titulo transparencia-preta">
               <p class="entr-data">{{ post.date | date: "%d_%m_%Y"  }}</p>

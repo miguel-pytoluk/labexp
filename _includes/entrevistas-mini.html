@@ -50,7 +50,7 @@
     border-top: none;
     border-bottom: none;
     height: 2.5rem;
-    width: 12.55rem;
+    width: 12.53rem;
     margin: -1rem 0 0 7.75rem;
   }
   @-moz-document url-prefix() {
@@ -59,6 +59,23 @@
     }
     .entr-mini-ret-separa{
       width: 12.5rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .entr-mini-grid{
+      display: grid;
+      height: fit-content;
+      margin: 0.75rem 0 0 0rem;
+      grid-template-columns: auto;
+    }
+    .entr-mini-data-titulo{
+      border-right: 0.15rem solid white;
+      border-bottom: none;
+      padding-bottom: 0.75rem;
+    }
+    .entr-mini-ret-separa{
+      margin-left: 0;
+      width: 100%;
     }
   }
 </style>
