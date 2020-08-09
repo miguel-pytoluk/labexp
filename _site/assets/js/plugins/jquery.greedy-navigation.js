@@ -48,7 +48,7 @@ $(function() {
   function check() {
 
     // Get instant state
-    availableSpace = $vlinks.width() - (10 + emRemToPx('8.34em', '#site-nav')); // adds 8.34em relative to the logo width
+    availableSpace = $(window).width() - (emRemToPx('16.75em')); // do not depent on measuring the items
     numOfVisibleItems = $vlinks.children().length;
     requiredSpace = breakWidths[numOfVisibleItems - 1];
 
@@ -89,7 +89,7 @@ $(function() {
     // Mouse is back, cancel the timer
     clearTimeout(timer);
   })
-
+  
   check();
 
 });

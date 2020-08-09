@@ -7,3 +7,7 @@ main:
     url: /residentes/
   - title: "Sobre"
     url: /sobre/
+  - title: "Sobres"
+    url: /sobre/#assa
+  - title: "Sobremesa"
+    url: /sobre/#osgi
