@@ -159,7 +159,7 @@ title: "Séries"
         font-size: 0.7rem;
       }
       .artistas_lista a h5{
-        font-size: 0.6rem;
+        font-size: 0.65rem;
       }
       .artistas_fotos{
         grid-template-columns: 29.5% 29.5% 29.5%;
