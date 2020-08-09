@@ -121,12 +121,15 @@ title: "Séries"
         border-left: 0.1em solid white;
         margin-left: 0.75em;
       }
+      .nav_e_video_serie{
+        margin-left: 0.1em;
+      }
       .serie_nav{
         background-color: #141010;
         display:none;
         position: absolute;
         z-index: 1;
-        margin: 0 auto;
+        margin: 0;
       }
       .video-container{
         margin-left: 0;
