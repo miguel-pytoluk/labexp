@@ -102,8 +102,8 @@ title: "Séries"
     }
     @media only screen and (max-width: 768px) {
       .tit_serie_principal {
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: 0;
+        margin-right: 0;
       }
       .fa-angle-down{
         display: block;
@@ -129,12 +129,13 @@ title: "Séries"
         margin: 0 auto;
       }
       .video-container{
-        margin-left: -0.1em;
-        margin-right: 1em;
+        margin-left: 0;
+        margin-right: 0;
       }
       .texto-serie{
-        margin-left: 1em;
-        margin-right: 1em;
+        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
         padding-top: 1em;
         padding-bottom: 1em;
       }
@@ -143,7 +144,7 @@ title: "Séries"
         padding-bottom: 1em;
       }
       .artistas_serie{
-        margin: 2em 1em 0 1em;
+        margin: 2em 0 0 0;
       }
       .nav_e_video_serie, .artistas_serie{
         grid-template-columns: auto;
