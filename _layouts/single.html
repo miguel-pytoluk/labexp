@@ -336,7 +336,7 @@ layout: default
   </style>
   {% assign myurl = page.url | split:'/' | pop | last %}
 	{% assign lasturl = page.url | split:'/' | last %}
-  {% if myurl == 'entrevistas' %}<script src="https://code.jquery.com/jquery-3.5.0.js"></script>{% endif %}
+  {% if myurl == 'entrevistas' %}<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>{% endif %}
   <link href="https://fonts.googleapis.com/css2?family=Domine&amp;display=swap" rel="stylesheet" />
 </head>
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -447,4 +447,4 @@ layout: default
     </div>
   {% endif %}
 </div>
-<script>$( "<div class='sqr-container'><div class='sqr'></div></div>" ).insertBefore( "h3" );</script>
+{% if myurl == 'entrevistas' %}<script>$( "<div class='sqr-container'><div class='sqr'></div></div>" ).insertBefore( "h3" );</script>{% endif %}

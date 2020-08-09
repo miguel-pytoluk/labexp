@@ -88,7 +88,27 @@ defaults:
       read_time: false
       comments: true
       share: true
-
+  # _series
+  - scope:
+      path: "_artistas"
+    values:
+      search: false
+  # _artistas
+  - scope:
+      path: "_artistas"
+    values:
+      search: false
+  # _residentes:
+  - scope:
+      path: "_residentes"
+    values:
+      search: false
+  # _sobre:
+  - scope:
+      path: "_sobre"
+    values:
+      search: false
+      
 category_archive:
   type: liquid
   path: /categories/
@@ -102,13 +122,9 @@ collections:
     permalink: /:collection/:path/
   series:
     output: false
-    search: false
   artistas:
     output: false
-    search: false
   residentes:
     output: false
-    search: false
   sobre:
     output: false
-    search: false
