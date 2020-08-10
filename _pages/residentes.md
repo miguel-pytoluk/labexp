@@ -19,10 +19,11 @@ title: "Residentes"
       border: 0.15rem solid white;
       border-right: 0;
       margin: 1em 0 1.5em 0.5em;
+	  max-block-size: 50em;
 	  background-color: white;
   	}
 	.residente-info{
-	  margin: -0.15rem 0 -0.15rem 0.15rem;
+	  margin: -0.15rem 0 -0.15rem 0;
 	  border: 0.15rem solid white;
       border-left: 0;
 	  display: grid;
@@ -41,10 +42,9 @@ title: "Residentes"
 	  margin: 0em 0 0em 0.2em; 
   	}
   	.residente-foto {
-  	  height: 6.27em;
+	  height: 6.27em;
 	  width: 6.27em;
-	  object-fit: cover;
-      background-color: white;
+  	  background-size: cover;
   	}
   	.residente-dados {
   	  width:100%;
@@ -66,6 +66,9 @@ title: "Residentes"
 	.art_mostrar_mais{
         display: none;
     }
+	.texto_invisivel{
+		visibility: hidden;
+	}
 	@media only screen and (max-width: 768px) {
 	  .residentes-container {
 		margin-left: 1rem;
@@ -101,7 +104,7 @@ title: "Residentes"
 <div class="residentes-container">
 {% for residente in site.residentes %}
     <div class="residente-block">
-    	<img class="residente-foto" src="{{ relative_url }}assets/images/{{ residente.foto }}">
+    	<div class="residente-foto" style="background-image:url('{{ relative_url }}assets/images/{{ residente.foto }}');"><p class="texto_invisivel">img_do_artista_img_do_artista_img_do_artista</p></div>
 		<div class="residente-info">
 			<div class="res-titulo-redes-div">
 				<h4 class="residente-titulo">{{ residente.nome }}</h4>
