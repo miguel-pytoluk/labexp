@@ -1,6 +1,8 @@
 ---
-nome: Alguém Especial
+nome: Alguém Especial Os Guri
 funcao: Musicista
 foto: alguem.png
+facebook: joazin
 ---
-Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Diuretics paradis num copo é motivis de denguis.
+Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam

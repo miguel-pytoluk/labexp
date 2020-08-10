@@ -196,21 +196,21 @@
   	  .title-div {
     	    margin-left: 1em;
   	  }
-	}
+	  }
     @media only screen and (min-width: 80em) {
-	.page {
-	    width: 100%;
-	    padding-right: 0px;
-	}
-	#page-sobre {
-	    width: calc(100% - 150px);
-	    padding-right: 150px;
-	}
-	#page-series {
-	    width: calc(100% - 50px);
-	    padding-right: 25px;
-	    padding-left: 100px;
-	}
+      .page {
+          width: 100%;
+          padding-right: 0px;
+      }
+      #page-sobre {
+          width: calc(100% - 150px);
+          padding-right: 150px;
+      }
+      #page-series {
+          width: calc(100% - 50px);
+          padding-right: 25px;
+          padding-left: 100px;
+      }
     }
     #header-Sobre {
       border: 0.1em solid white;
@@ -430,6 +430,27 @@
     .pagination--pager{
       background-color: #141010;
     }
+    #page-title-Residentes{
+      display: grid;
+      grid-template-columns: 1rem 9.9rem auto;
+      width: 17.5em;
+      margin-left: 5em;
+    }
+    #tit-div-Residentes{
+      margin-left: 0;
+      padding-left: 0.75rem;
+      width: auto;
+    }
+    .res-tit-ret-vazio-peq, .res-tit-ret-vazio-gd{
+      border: 0.1em solid white;
+    }
+    .res-tit-ret-vazio-peq{
+      border-right: none;
+    }
+    .res-tit-ret-vazio-gd{
+      border-left: none;
+    }
+    
     @media only screen and (max-width: 768px) {
       #header-Sobre{
         margin-left: 0;
@@ -441,6 +462,12 @@
       #tit-div-Séries{
         width: 100%;
         margin-top: 0em;
+        margin-left: 0em;
+      }
+      #page-title-Residentes{
+        display: grid;
+        grid-template-columns: 1rem 9.9rem auto;
+        width: 100%;
         margin-left: 0em;
       }
       /*entrevistas*/
@@ -538,8 +565,8 @@
 
     <div class="page__inner-wrap">
       
-  <header id="header-Residentes"><h1 id="page-title-Residentes" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Residentes">Residentes
-          </div></h1>
+      <header id="header-Residentes"><h1 id="page-title-Residentes" class="page__title" itemprop="headline"><div class="res-tit-ret-vazio-peq"></div><div class="title-div" id="tit-div-Residentes">Residentes</div><div class="res-tit-ret-vazio-gd"></div></h1>
+      
           
         </header>
       
@@ -547,140 +574,246 @@
       <section class="page__content" id="section_" itemprop="text">
         
         <head>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&amp;display=swap" rel="stylesheet" />
   <style>
   	.residentes-container {
-  	  display: grid; /* 1 */
-  	  grid-template-columns: repeat(auto-fill, 130px); /* 2 */
-  	  grid-gap: 1rem; /* 3 */
-  	  justify-content: space-evenly; /* 4 */
-  	  border: 0.1em solid white;
-  	  padding-top: 2.5em;
-  	  margin-top: -1.5em;
-  	  padding-bottom: 0.5em;
+  	  border: 0.15em solid white;
+	  border-top: none;
+      margin-top: -0.75rem;
+      margin-left: 8.8rem;
+      width: 9.9rem;
+      padding: 1.5em 0 1em 2.75em;
   	}
   	.residente-block {
-  	  display: inline-block;
-  	  margin: 0 0.75em;
+  	  display: flex;
+	  height: fit-content;
+      border: 0.15rem solid white;
+      border-right: 0;
+      margin: 1em 0 1.5em 0.5em;
+	  background-color: white;
   	}
-	.res-titulo-div{
+	.residente-info{
+	  margin: -0.15rem 0 -0.15rem 0.15rem;
+	  border: 0.15rem solid white;
+      border-left: 0;
+	  display: grid;
+	  grid-template-columns: 8rem 22rem;
+	}
+	.res-titulo-redes-div{
+      padding: 0.25em 0.75em 0.25em 0.75em;
 	  display: flex;
-    	  justify-content: center;
+      flex-direction: column;
+      justify-content:center;
 	}
   	.residente-titulo {
-  	  text-align: center;
-  	  margin-top: 0.5em;
-  	  margin-bottom: 0.1em;
-  	  width: 100px;
+	  vertical-align: baseline;
+	  line-height: 1.2em;
+	  display: inline-block;
+	  margin: 0em 0 0em 0.2em; 
   	}
   	.residente-foto {
-  	  display: block;
-  	  object-fit: cover;
-	  height: 100px;
-	  width: 100px;
-  	  margin: 0 auto;
-  	  border: 0.3em solid white;
-  	  background-color: white;
+  	  height: 6.27em;
+	  width: 6.27em;
+	  object-fit: cover;
+      background-color: white;
   	}
   	.residente-dados {
   	  width:100%;
   	}
-  	.redes{
-  	  text-align: center;
-  	}
   	a, a:visited, a:hover{
   	  color:white;
   	}
-  	
+	.res-mini-bio{
+	  display: flex;
+      flex-direction: column;
+      justify-content:center;
+	  padding-right: 1.5em;
+	}  
+	.page__content p {
+      font-family: 'Domine', serif;
+      font-size: 0.6rem;
+      margin-bottom: 0;
+    }
+	.art_mostrar_mais{
+        display: none;
+    }
+	@media only screen and (max-width: 768px) {
+	  .residentes-container {
+		margin-left: 1rem;
+  	  }
+	  .res-mini-bio{
+		display: none;
+	  }
+	  .residente-block {
+      	background-color: unset;
+  	  }
+	  .residente-info{
+		grid-template-columns: 8rem;
+	  }
+	  .art_mostrar_mais{
+        display: inline-block;
+      }
+	  .res-mini-bio{
+		padding: 0.25em 1em 0.5em 1em;
+	  }  
+	}
   </style>
+	<script>
+	function mostrarBio(id) {
+		var x = document.getElementById(id);
+		if (x.style.display === "block") {
+		x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+		}
+	</script>
 </head>
 <div class="residentes-container">
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/alguem.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
-      <div class="redes">
-      	
-      	
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/alguem.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Alguém Especial Os Guri</h4>
+				<div id="redes_AlguémEspecialOsGuri" class="redes">
+					
+					
+					<a href="https://facebook.com/joazin"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+					
+					
+					<a class="art_mostrar_mais" href="#redes_AlguémEspecialOsGuri" onclick="mostrarBio('bio_AlguémEspecialOsGuri')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_AlguémEspecialOsGuri" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam</p>
+</p></div>
+		</div>
     </div>  
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/alguem.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
-      <div class="redes">
-      	
-      	
-      	<a href="https://facebook.com/joazin"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
-      	
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/alguem.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Outro Alguém</h4>
+				<div id="redes_OutroAlguém" class="redes">
+					
+					
+					<a href="https://facebook.com/joazin"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+					
+					
+					<a class="art_mostrar_mais" href="#redes_OutroAlguém" onclick="mostrarBio('bio_OutroAlguém')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_OutroAlguém" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis.</p>
+</p></div>
+		</div>
     </div>  
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/alguem.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Alguém Especial</h4></div>
-      <div class="redes">
-      	
-      	<a href="https://instagram.com/joao"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	
-      	
-      	<a href="https://facebook.com/joao"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
-      	
-      	
-      	<a href="https://twitter.com/joao"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/alguem.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Alguém Especial</h4>
+				<div id="redes_AlguémEspecial" class="redes">
+					
+					<a href="https://instagram.com/joao"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					
+					
+					<a href="https://facebook.com/joao"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+					
+					
+					<a href="https://twitter.com/joao"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
+					
+					<a class="art_mostrar_mais" href="#redes_AlguémEspecial" onclick="mostrarBio('bio_AlguémEspecial')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_AlguémEspecial" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur.</p>
+</p></div>
+		</div>
     </div>  
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
-      <div class="redes">
-      	
-      	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	
-      	
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/julia.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Julia Barros</h4>
+				<div id="redes_JuliaBarros" class="redes">
+					
+					<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					
+					
+					
+					<a class="art_mostrar_mais" href="#redes_JuliaBarros" onclick="mostrarBio('bio_JuliaBarros')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_JuliaBarros" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat.</p>
+</p></div>
+		</div>
     </div>  
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
-      <div class="redes">
-      	
-      	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	
-      	
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/julia.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Julia Silva</h4>
+				<div id="redes_JuliaSilva" class="redes">
+					
+					<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					
+					
+					
+					<a class="art_mostrar_mais" href="#redes_JuliaSilva" onclick="mostrarBio('bio_JuliaSilva')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_JuliaSilva" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam</p>
+</p></div>
+		</div>
     </div>  
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
-      <div class="redes">
-      	
-      	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	
-      	
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/julia.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Julia Silveira</h4>
+				<div id="redes_JuliaSilveira" class="redes">
+					
+					<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					
+					
+					
+					<a class="art_mostrar_mais" href="#redes_JuliaSilveira" onclick="mostrarBio('bio_JuliaSilveira')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_JuliaSilveira" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam</p>
+</p></div>
+		</div>
     </div>  
 
     <div class="residente-block">
-      <img class="residente-foto" src="assets/images/julia.png" />
-      <div class="res-titulo-div"><h4 class="residente-titulo">Julia Santos</h4></div>
-      <div class="redes">
-      	
-      	<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	
-      	
-      	
-      	<a href="https://twitter.com/juju"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
-      	
-      </div>
+    	<img class="residente-foto" src="assets/images/julia.png" />
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">Julia Santos</h4>
+				<div id="redes_JuliaSantos" class="redes">
+					
+					<a href="https://instagram.com/julinha"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					
+					
+					
+					<a href="https://twitter.com/juju"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
+					
+					<a class="art_mostrar_mais" href="#redes_JuliaSantos" onclick="mostrarBio('bio_JuliaSantos')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_JuliaSantos" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam</p>
+</p></div>
+		</div>
     </div>  
 
 </div>

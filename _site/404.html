@@ -196,21 +196,21 @@
   	  .title-div {
     	    margin-left: 1em;
   	  }
-	}
+	  }
     @media only screen and (min-width: 80em) {
-	.page {
-	    width: 100%;
-	    padding-right: 0px;
-	}
-	#page-sobre {
-	    width: calc(100% - 150px);
-	    padding-right: 150px;
-	}
-	#page-series {
-	    width: calc(100% - 50px);
-	    padding-right: 25px;
-	    padding-left: 100px;
-	}
+      .page {
+          width: 100%;
+          padding-right: 0px;
+      }
+      #page-sobre {
+          width: calc(100% - 150px);
+          padding-right: 150px;
+      }
+      #page-series {
+          width: calc(100% - 50px);
+          padding-right: 25px;
+          padding-left: 100px;
+      }
     }
     #header-Sobre {
       border: 0.1em solid white;
@@ -430,6 +430,27 @@
     .pagination--pager{
       background-color: #141010;
     }
+    #page-title-Residentes{
+      display: grid;
+      grid-template-columns: 1rem 9.9rem auto;
+      width: 17.5em;
+      margin-left: 5em;
+    }
+    #tit-div-Residentes{
+      margin-left: 0;
+      padding-left: 0.75rem;
+      width: auto;
+    }
+    .res-tit-ret-vazio-peq, .res-tit-ret-vazio-gd{
+      border: 0.1em solid white;
+    }
+    .res-tit-ret-vazio-peq{
+      border-right: none;
+    }
+    .res-tit-ret-vazio-gd{
+      border-left: none;
+    }
+    
     @media only screen and (max-width: 768px) {
       #header-Sobre{
         margin-left: 0;
@@ -441,6 +462,12 @@
       #tit-div-Séries{
         width: 100%;
         margin-top: 0em;
+        margin-left: 0em;
+      }
+      #page-title-Residentes{
+        display: grid;
+        grid-template-columns: 1rem 9.9rem auto;
+        width: 100%;
         margin-left: 0em;
       }
       /*entrevistas*/
@@ -538,7 +565,7 @@
 
     <div class="page__inner-wrap">
       
-  <header id="header-Página Não Encontrada"><h1 id="page-title-Página Não Encontrada" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Página Não Encontrada">Página Não Encontrada
+      <header id="header-Página Não Encontrada"><h1 id="page-title-Página Não Encontrada" class="page__title" itemprop="headline"><div class="title-div" id="tit-div-Página Não Encontrada">Página Não Encontrada
           </div></h1>
           
         </header>

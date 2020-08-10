@@ -128,7 +128,7 @@ title: "Séries"
         display:none;
         position: absolute;
         z-index: 1;
-        margin: 0;
+        margin: 0 0 0 -0.1em;
       }
       .video-container{
         margin-left: 0;
@@ -177,7 +177,6 @@ title: "Séries"
         x.style.display = "none";
       } else {
           x.style.display = "block";
-          x.style.marginLeft = "-0.1em";
       }
      }
   </script>

@@ -3,68 +3,123 @@ permalink: /residentes/
 title: "Residentes"
 ---
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
   <style>
   	.residentes-container {
-  	  display: grid; /* 1 */
-  	  grid-template-columns: repeat(auto-fill, 130px); /* 2 */
-  	  grid-gap: 1rem; /* 3 */
-  	  justify-content: space-evenly; /* 4 */
-  	  border: 0.1em solid white;
-  	  padding-top: 2.5em;
-  	  margin-top: -1.5em;
-  	  padding-bottom: 0.5em;
+  	  border: 0.15em solid white;
+	  border-top: none;
+      margin-top: -0.75rem;
+      margin-left: 8.8rem;
+      width: 9.9rem;
+      padding: 1.5em 0 1em 2.75em;
   	}
   	.residente-block {
-  	  display: inline-block;
-  	  margin: 0 0.75em;
+  	  display: flex;
+	  height: fit-content;
+      border: 0.15rem solid white;
+      border-right: 0;
+      margin: 1em 0 1.5em 0.5em;
+	  background-color: white;
   	}
-	.res-titulo-div{
+	.residente-info{
+	  margin: -0.15rem 0 -0.15rem 0.15rem;
+	  border: 0.15rem solid white;
+      border-left: 0;
+	  display: grid;
+	  grid-template-columns: 8rem 22rem;
+	}
+	.res-titulo-redes-div{
+      padding: 0.25em 0.75em 0.25em 0.75em;
 	  display: flex;
-    	  justify-content: center;
+      flex-direction: column;
+      justify-content:center;
 	}
   	.residente-titulo {
-  	  text-align: center;
-  	  margin-top: 0.5em;
-  	  margin-bottom: 0.1em;
-  	  width: 100px;
+	  vertical-align: baseline;
+	  line-height: 1.2em;
+	  display: inline-block;
+	  margin: 0em 0 0em 0.2em; 
   	}
   	.residente-foto {
-  	  display: block;
-  	  object-fit: cover;
-	  height: 100px;
-	  width: 100px;
-  	  margin: 0 auto;
-  	  border: 0.3em solid white;
-  	  background-color: white;
+  	  height: 6.27em;
+	  width: 6.27em;
+	  object-fit: cover;
+      background-color: white;
   	}
   	.residente-dados {
   	  width:100%;
   	}
-  	.redes{
-  	  text-align: center;
-  	}
   	a, a:visited, a:hover{
   	  color:white;
   	}
-  	
+	.res-mini-bio{
+	  display: flex;
+      flex-direction: column;
+      justify-content:center;
+	  padding-right: 1.5em;
+	}  
+	.page__content p {
+      font-family: 'Domine', serif;
+      font-size: 0.6rem;
+      margin-bottom: 0;
+    }
+	.art_mostrar_mais{
+        display: none;
+    }
+	@media only screen and (max-width: 768px) {
+	  .residentes-container {
+		margin-left: 1rem;
+  	  }
+	  .res-mini-bio{
+		display: none;
+	  }
+	  .residente-block {
+      	background-color: unset;
+  	  }
+	  .residente-info{
+		grid-template-columns: 8rem;
+	  }
+	  .art_mostrar_mais{
+        display: inline-block;
+      }
+	  .res-mini-bio{
+		padding: 0.25em 1em 0.5em 1em;
+	  }  
+	}
   </style>
+	<script>
+	function mostrarBio(id) {
+		var x = document.getElementById(id);
+		if (x.style.display === "block") {
+		x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+		}
+	</script>
 </head>
 <div class="residentes-container">
 {% for residente in site.residentes %}
     <div class="residente-block">
-      <img class="residente-foto" src="{{ relative_url }}assets/images/{{ residente.foto }}">
-      <div class="res-titulo-div"><h4 class="residente-titulo">{{ residente.nome }}</h4></div>
-      <div class="redes">
-      	{% if residente.instagram %}
-      	<a href="https://instagram.com/{{ residente.instagram }}"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
-      	{% endif %}
-      	{% if residente.facebook %}
-      	<a href="https://facebook.com/{{ residente.facebook }}"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
-      	{% endif %}
-      	{% if residente.twitter %}
-      	<a href="https://twitter.com/{{ residente.twitter }}"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
-      	{% endif %}
-      </div>
+    	<img class="residente-foto" src="{{ relative_url }}assets/images/{{ residente.foto }}">
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">{{ residente.nome }}</h4>
+				<div id="redes_{{ residente.nome | remove:' ' }}" class="redes">
+					{% if residente.instagram %}
+					<a href="https://instagram.com/{{ residente.instagram }}"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					{% endif %}
+					{% if residente.facebook %}
+					<a href="https://facebook.com/{{ residente.facebook }}"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+					{% endif %}
+					{% if residente.twitter %}
+					<a href="https://twitter.com/{{ residente.twitter }}"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
+					{% endif %}
+					<a class="art_mostrar_mais" href="#redes_{{ residente.nome | remove:' ' }}" onclick="mostrarBio('bio_{{ residente.nome | remove:' ' }}')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_{{ residente.nome | remove:' ' }}" class="res-mini-bio"><p>{{ residente.content }}</p></div>
+		</div>
     </div>  
 {% endfor %}
 </div>

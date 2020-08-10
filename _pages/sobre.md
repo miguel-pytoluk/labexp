@@ -54,6 +54,8 @@ title: "Sobre"
     }
     .mente-foto{
       height: 5.066em;
+      width: 5.066em;
+	    object-fit: cover;
       background-color: white;
     }
     .men-titulo-div, .redes{

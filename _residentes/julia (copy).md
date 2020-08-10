@@ -1,7 +1,8 @@
 ---
-nome: Julia Santos
+nome: Julia Silveira
 funcao: Artista Visual
 foto: julia.png
 instagram: julinha
 ---
-Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Casamentiss faiz malandris se pirulitá.
+Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam

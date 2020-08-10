@@ -1,7 +1,7 @@
 ---
-nome: Julia Santos
+nome: Julia Barros
 funcao: Artista Visual
 foto: julia.png
 instagram: julinha
 ---
-Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Casamentiss faiz malandris se pirulitá.
+Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
