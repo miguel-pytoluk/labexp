@@ -42,6 +42,14 @@ title: "Sobre"
       width: 8em;
       padding: 1.5em 0 1em 2em;
     }
+    @-moz-document url-prefix() {
+      #sobre_2o_card img{
+        height: 13.85em;
+      }
+      #sobre_3o_card{
+        margin-top: -0.05em;
+      }
+    }
     #sobre_3o_card h1 {
       margin-bottom: 0em;
     }
@@ -53,11 +61,16 @@ title: "Sobre"
       background-color: white;
     }
     .mente-foto{
-      height: 5.066em;
-      width: 5.066em;
-	    object-fit: cover;
-      background-color: white;
+      height: 5.2em;
+      width: 5.2em;
+	    background-position: center;
+  	  background-size: cover;
     }
+    .texto_invisivel{
+      /* firefox ainda não aceita width em uma img dentro de flexbox, esse foi o workaround mais facil de executar */
+      /* é necessário um texto dentro do container para mostrar a background img */
+      visibility: hidden;
+	  }
     .men-titulo-div, .redes{
       border: 0.1em solid white;
       border-left: 0;
@@ -96,10 +109,12 @@ title: "Sobre"
 	    }
 	    #sobre_2o_card{
 	      margin: auto;
+        border-top: none;
 	      width: 100%;
 	    }
 	    #sobre_2o_card img{
 	      width: 100%;
+        height: 13.9em;
 	    }
 	    #sobre_3o_card{
 	      margin-left: 0em;
@@ -123,7 +138,7 @@ title: "Sobre"
   <h1>é</h1>
   {% for mente in site.sobre %}
     <div class="mente-block">
-      <img class="mente-foto" src="{{ relative_url }}assets/images/{{ mente.foto }}">
+      <div class="mente-foto" style="background-image:url('{{ relative_url }}assets/images/{{ mente.foto }}');"><p class="texto_invisivel">img_da_mente_img_da_mente_img_da_mente_img_da_mente</p></div>
       <div class="men-titulo-div">
         <h4 class="mente-nome">{{ mente.nome }}</h4>
         <h6 class="mente-funcao">{{ mente.funcao }}</h6>

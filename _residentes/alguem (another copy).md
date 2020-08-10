@@ -1,5 +1,5 @@
 ---
-nome: Alguém Especial Os Guri
+nome: Alguém Especial de Nome Maior
 funcao: Musicista
 foto: alguem.png
 facebook: joazin

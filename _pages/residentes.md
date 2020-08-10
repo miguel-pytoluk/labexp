@@ -42,10 +42,18 @@ title: "Residentes"
 	  margin: 0em 0 0em 0.2em; 
   	}
   	.residente-foto {
+	  /* firefox ainda não aceita width em uma img dentro de flexbox, esse foi o workaround mais facil de executar */
+	  /* é necessário um texto dentro do container para mostrar a background img */
 	  height: 6.27em;
 	  width: 6.27em;
+	  background-position: center;
   	  background-size: cover;
   	}
+	.texto_invisivel{
+		/* firefox ainda não aceita width em uma img dentro de flexbox, esse foi o workaround mais facil de executar */
+		/* é necessário um texto dentro do container para mostrar a background img */
+		visibility: hidden;
+	}
   	.residente-dados {
   	  width:100%;
   	}
@@ -66,9 +74,6 @@ title: "Residentes"
 	.art_mostrar_mais{
         display: none;
     }
-	.texto_invisivel{
-		visibility: hidden;
-	}
 	@media only screen and (max-width: 768px) {
 	  .residentes-container {
 		margin-left: 1rem;

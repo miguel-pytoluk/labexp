@@ -613,10 +613,18 @@
 	  margin: 0em 0 0em 0.2em; 
   	}
   	.residente-foto {
+	  /* firefox ainda não aceita width em uma img dentro de flexbox, esse foi o workaround mais facil de executar */
+	  /* é necessário um texto dentro do container para mostrar a background img */
 	  height: 6.27em;
 	  width: 6.27em;
+	  background-position: center;
   	  background-size: cover;
   	}
+	.texto_invisivel{
+		/* firefox ainda não aceita width em uma img dentro de flexbox, esse foi o workaround mais facil de executar */
+		/* é necessário um texto dentro do container para mostrar a background img */
+		visibility: hidden;
+	}
   	.residente-dados {
   	  width:100%;
   	}
@@ -637,9 +645,6 @@
 	.art_mostrar_mais{
         display: none;
     }
-	.texto_invisivel{
-		visibility: hidden;
-	}
 	@media only screen and (max-width: 768px) {
 	  .residentes-container {
 		margin-left: 1rem;
@@ -678,17 +683,17 @@
     	<div class="residente-foto" style="background-image:url('assets/images/alguem.png');"><p class="texto_invisivel">img_do_artista_img_do_artista_img_do_artista</p></div>
 		<div class="residente-info">
 			<div class="res-titulo-redes-div">
-				<h4 class="residente-titulo">Alguém Especial Os Guri</h4>
-				<div id="redes_AlguémEspecialOsGuri" class="redes">
+				<h4 class="residente-titulo">Alguém Especial de Nome Maior</h4>
+				<div id="redes_AlguémEspecialdeNomeMaior" class="redes">
 					
 					
 					<a href="https://facebook.com/joazin"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
 					
 					
-					<a class="art_mostrar_mais" href="#redes_AlguémEspecialOsGuri" onclick="mostrarBio('bio_AlguémEspecialOsGuri')"><i class="fas fa-plus-circle"></i></a>
+					<a class="art_mostrar_mais" href="#redes_AlguémEspecialdeNomeMaior" onclick="mostrarBio('bio_AlguémEspecialdeNomeMaior')"><i class="fas fa-plus-circle"></i></a>
 				</div>
 			</div>
-			<div id="bio_AlguémEspecialOsGuri" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+			<div id="bio_AlguémEspecialdeNomeMaior" class="res-mini-bio"><p><p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
 Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam</p>
 </p></div>
 		</div>
