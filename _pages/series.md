@@ -111,7 +111,6 @@ title: "Séries"
         margin-top: 0.45em;
       }
       .cascata {
-        position: absolute;
         display: block;
       }
       .serie_principal_div_vazia{
@@ -191,9 +190,9 @@ title: "Séries"
 <div class="nav_e_video_serie">
   <nav class="serie_nav" id="serie_nav">
     <ul>
-      <li class="series-navitem"><a href="#">_Outra série</a></li>
-      <li class="series-navitem"><a href="#">_Mais uma série</a></li>
-      <li class="series-navitem"><a href="#">_Uma Série com o Nome Maior</a></li>
+      <li class="series-navitem"><a href="#" onclick="mostrarNav()">_Outra série</a></li>
+      <li class="series-navitem"><a href="#" onclick="mostrarNav()">_Mais uma série</a></li>
+      <li class="series-navitem"><a href="#" onclick="mostrarNav()">_Uma Série com o Nome Maior</a></li>
     </ul>
   </nav>
   <div class="video-container">
