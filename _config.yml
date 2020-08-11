@@ -128,3 +128,8 @@ collections:
     output: false
   sobre:
     output: false
+
+feed:
+  categories:
+    - entrevistas
+    - series

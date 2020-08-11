@@ -106,7 +106,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--sobre">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -543,6 +543,11 @@
       display: none;
      }
     }
+    @media only screen and (max-width: 350px) {
+      #tit-div-Sobre{
+        border-right: none;
+      }
+    }
   </style>
   
 	
@@ -573,135 +578,11 @@
   
       <section class="page__content" id="section_" itemprop="text">
         
-        <head>
-  <link href="https://fonts.googleapis.com/css2?family=Domine&amp;display=swap" rel="stylesheet" />
-  <style>
-    h3 {
-      margin-top: 0em;
-    }
-    #sobre_1o_card{
-      width: 17.3em;
-      border: 0.1em solid white;
-      border-top: 0;
-      padding: 1em;
-      margin-left: 1.55em;
-      padding-bottom: 0.1em;
-    }
-    .page__content p {
-      font-family: 'Domine', serif;
-      font-size: 0.6rem;
-    }
-    #sobre_2o_card{
-      border: 0.1em solid white;
-      margin-top: -0.1em;
-      margin-left: 18.75em;
-      height: 14em;
-      width: 22.95em;
-      background-color: white;
-    }
-    #sobre_2o_card img{
-      height: 13.8em;
-      width: 22.75em;
-      object-fit: cover;
-      margin-left: 0.01em;
-      background-color: white;
-    }
-    #sobre_3o_card{
-      border: 0.1em solid white;
-      margin-top: -0.1em;
-      margin-left: 10.85em;
-      width: 8em;
-      padding: 1.5em 0 1em 2em;
-    }
-    @-moz-document url-prefix() {
-      #sobre_2o_card img{
-        height: 13.85em;
-      }
-      #sobre_3o_card{
-        margin-top: -0.05em;
-      }
-    }
-    #sobre_3o_card h1 {
-      margin-bottom: 0em;
-    }
-    .mente-block {
-      display: flex;
-      border: 0.1em solid white;
-      border-right: 0;
-      margin: 1em 0 1.5em 0.5em;
-      background-color: white;
-    }
-    .mente-foto{
-      height: 5.2em;
-      width: 5.2em;
-	    background-position: center;
-  	  background-size: cover;
-    }
-    .texto_invisivel{
-      /* firefox ainda não aceita width em uma img dentro de flexbox, esse foi o workaround mais facil de executar */
-      /* é necessário um texto dentro do container para mostrar a background img */
-      visibility: hidden;
-	  }
-    .men-titulo-div, .redes{
-      border: 0.1em solid white;
-      border-left: 0;
-      margin: -0.1em 0 -0.1em 0.1em;
-      padding-top: 0.1em;
-      padding-bottom: 0.1em;
-    }
-    .men-titulo-div{
-      padding-left: 1em;
-      margin-right: 0;
-      border-right: 0;
-    }
-    .men-titulo-div h4, .men-titulo-div h5{
-      width: 9em;
-    }
-    .page__content h6 {
-      margin: 0 0 0 0;
-      font-family: 'Domine', serif;
-      font-size: 0.6rem;
-      font-weight: normal;
-    }
-    .mente-nome{
-      margin: 0.5em 0 0.25em 0; 
-    }
-    .redes{
-      margin-left: -0.007em;
-      padding-right: 0.2em;
-    }
-    a, a:visited, a:hover{
-  	  color:white;
-    }
-    @media only screen and (max-width: 768px) {
-    	#sobre_1o_card{
-	      width: 100%;
-	      margin-left: 0;
-	    }
-	    #sobre_2o_card{
-	      margin: auto;
-        border-top: none;
-	      width: 100%;
-	    }
-	    #sobre_2o_card img{
-	      width: 100%;
-        height: 13.9em;
-	    }
-	    #sobre_3o_card{
-	      margin-left: 0em;
-	    }
-	}
-      @media only screen and (max-width: 350px) {
-        .mente-block {
-          margin-left: 0.4em;
-        }
-        #sobre_3o_card{
-          margin-left: 0em;
-          padding-left: 0.5em;
-          width: 6.4em;
-        }
-    }
-  </style>
+        
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link href="../assets/css/sobre.css" rel="stylesheet">
 </head>
 
 <div id="sobre_1o_card">
@@ -712,7 +593,7 @@
   <p class="sobre-paragrafo">Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip. </p>
 </div>
 <div id="sobre_2o_card">
-  <img src="/LabXP/assets/images/sobrelabxp.jpg" alt="um dia de LabXP" />
+  <img src="/LabXP/assets/images/sobrelabxp.jpg" alt="um dia de LabXP">
 </div>
 <div id="sobre_3o_card">
   <h1>LabXP</h1>

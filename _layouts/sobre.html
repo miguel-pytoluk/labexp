@@ -1,0 +1,45 @@
+---
+layout: single
+---
+
+{{ content }}
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link href="../assets/css/sobre.css" rel="stylesheet">
+</head>
+
+<div id="sobre_1o_card">
+  <h3>Somos um lugar lindo maravilhoso venha você tbm tá ligado, agora ou nunca.</h3>
+
+  <p class="sobre-paragrafo">O lab_xp foi criado para isso e isso mussum Ipsum, tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.</p>
+
+  <p class="sobre-paragrafo">Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip. </p>
+</div>
+<div id="sobre_2o_card">
+  <img src="/LabXP/assets/images/sobrelabxp.jpg" alt="um dia de LabXP">
+</div>
+<div id="sobre_3o_card">
+  <h1>LabXP</h1>
+  <h1>é</h1>
+  {% for mente in site.sobre %}
+    <div class="mente-block">
+      <div class="mente-foto" style="background-image:url('{{ relative_url }}assets/images/{{ mente.foto }}');"><p class="texto_invisivel">img_da_mente_img_da_mente_img_da_mente_img_da_mente</p></div>
+      <div class="men-titulo-div">
+        <h4 class="mente-nome">{{ mente.nome }}</h4>
+        <h6 class="mente-funcao">{{ mente.funcao }}</h6>
+        {% if mente.funcao2 %}<h6 class="mente-funcao2">{{ mente.funcao2 }}</h6>{% endif %}
+      </div>
+      <div class="redes">
+      	{% if mente.instagram %}
+      	<a href="https://instagram.com/{{ mente.instagram }}"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+      	{% endif %}
+      	{% if mente.facebook %}
+      	<a href="https://facebook.com/{{ mente.facebook }}"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+      	{% endif %}
+      	{% if mente.twitter %}
+      	<a href="https://twitter.com/{{ mente.twitter }}"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
+      	{% endif %}
+      </div>
+    </div>  
+  {% endfor %}
+</div>

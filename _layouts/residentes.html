@@ -1,0 +1,44 @@
+---
+layout: single
+---
+
+{{ content }}
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link href="../assets/css/residentes.css" rel="stylesheet">
+	<script>
+	function mostrarBio(id) {
+		var x = document.getElementById(id);
+		if (x.style.display === "block") {
+		x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}
+	</script>
+</head>
+<div class="residentes-container">
+{% for residente in site.residentes %}
+    <div class="residente-block">
+    	<div class="residente-foto" style="background-image:url('{{ relative_url }}assets/images/{{ residente.foto }}');"><p class="texto_invisivel">img_do_artista_img_do_artista_img_do_artista</p></div>
+		<div class="residente-info">
+			<div class="res-titulo-redes-div">
+				<h4 class="residente-titulo">{{ residente.nome }}</h4>
+				<div id="redes_{{ residente.nome | remove:' ' }}" class="redes">
+					{% if residente.instagram %}
+					<a href="https://instagram.com/{{ residente.instagram }}"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i></a>
+					{% endif %}
+					{% if residente.facebook %}
+					<a href="https://facebook.com/{{ residente.facebook }}"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i></a>
+					{% endif %}
+					{% if residente.twitter %}
+					<a href="https://twitter.com/{{ residente.twitter }}"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i></a>
+					{% endif %}
+					<a class="art_mostrar_mais" href="#redes_{{ residente.nome | remove:' ' }}" onclick="mostrarBio('bio_{{ residente.nome | remove:' ' }}')"><i class="fas fa-plus-circle"></i></a>
+				</div>
+			</div>
+			<div id="bio_{{ residente.nome | remove:' ' }}" class="res-mini-bio"><p>{{ residente.content }}</p></div>
+		</div>
+    </div>  
+{% endfor %}
+</div>

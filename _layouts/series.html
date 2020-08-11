@@ -1,0 +1,88 @@
+---
+layout: single
+---
+
+{{ content }}
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link href="../assets/css/series.css" rel="stylesheet">
+  <script>
+    function mostrarNav() {
+      if($(window).width() <= 768){	// só é executado em dispositivos mobile
+        var x = document.getElementById("serie_nav");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+      }
+    }
+  </script>
+</head>
+<div class="tit_serie_principal">
+  <a class="cascata" href="javascript:void(0);" onclick="mostrarNav()"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+  <div class="serie_principal_div_vazia"></div>
+  <div class="serie_principal_titulo">_Sessões Tronco</div>
+</div>
+<div class="nav_e_video_serie">
+  <nav class="serie_nav" id="serie_nav">
+    <ul>
+      <li class="series-navitem"><a href="#" onclick="mostrarNav()">_Outra série</a></li>
+      <li class="series-navitem"><a href="#" onclick="mostrarNav()">_Mais uma série</a></li>
+      <li class="series-navitem"><a href="#" onclick="mostrarNav()">_Uma Série com o Nome Maior</a></li>
+    </ul>
+  </nav>
+  <div class="video-container">
+    <iframe class="series-video" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLDXfT5I07qSI7DlWwRu_0v8Po0Icw0HI8&autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="texto-serie">
+  <p>Texto sobre as Sessões Tronco landit hendrerit. Aenean sit amet nisi. Nec orci ornare consequat. 
+Praesent lacinia ultrices consectetur. Sed non ipsum felis. Quem num gosta di mim que vai caçá sua turmis! Nullam volutpat risus nc leo commodo, ut interdum diam laoreet. Sed non consequat odio. 
+Si u mundo tá muito paradis? Toma um</p>
+</div>
+<div class="artistas_serie">
+  <div class="artistas_presentes">
+    <h1>Artistas presentes nas Séries_lab</h1>
+  </div>
+  <div class="artistas_fotos_e_lista">
+    <div class="artistas_fotos">
+    {% for artista_full in site.artistas limit:3 %}
+      <div class="art_foto_div">
+        <img class="artista_foto" src="/LabXP/artistas/assets/images/{{ artista_full.foto }}">
+        <a href="#"><h5>_{{ artista_full.nome }}</h5></a>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="artistas_lista">
+      {% for artista in site.artistas offset:4 limit:4 %}
+      <a href="#"><h5>_{{ artista.nome }}</h5></a>
+      {% endfor %}
+    </div>
+    <div class="artistas_lista">
+      {% for artista in site.artistas offset:8 limit:4 %}
+      <a href="#"><h5>_{{ artista.nome }}</h5></a>
+      {% endfor %}
+    </div>
+    <div class="artistas_lista">
+      {% for artista in site.artistas offset:12 limit:4 %}
+      <a href="#"><h5>_{{ artista.nome }}</h5></a>
+      {% endfor %}
+    </div>
+    <div class="artistas_lista">
+      {% for artista in site.artistas offset:16 limit:4 %}
+      <a href="#"><h5>_{{ artista.nome }}</h5></a>
+      {% endfor %}
+    </div>
+    <div class="artistas_lista">
+      {% for artista in site.artistas offset:20 limit:4 %}
+      <a href="#"><h5>_{{ artista.nome }}</h5></a>
+      {% endfor %}
+    </div>
+    <div class="artistas_lista">
+      {% for artista in site.artistas offset:24 limit:4 %}
+      <a href="#"><h5>_{{ artista.nome }}</h5></a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
