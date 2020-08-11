@@ -57,7 +57,7 @@ title: "Sobre"
       display: flex;
       border: 0.1em solid white;
       border-right: 0;
-      margin: 1em 0 1.5em 0.4em;
+      margin: 1em 0 1.5em 0.5em;
       background-color: white;
     }
     .mente-foto{
@@ -118,10 +118,18 @@ title: "Sobre"
 	    }
 	    #sobre_3o_card{
 	      margin-left: 0em;
-        padding-left: 1.1em;
-        width: 7em;
 	    }
 	}
+      @media only screen and (max-width: 350px) {
+        .mente-block {
+          margin-left: 0.4em;
+        }
+        #sobre_3o_card{
+          margin-left: 0em;
+          padding-left: 0.5em;
+          width: 6.4em;
+        }
+    }
   </style>
 </head>
 

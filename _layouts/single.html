@@ -360,6 +360,11 @@ layout: default
       display: none;
      }
     }
+    @media only screen and (max-width: 350px) {
+      #tit-div-Sobre{
+        border-right: none;
+      }
+    }
   </style>
   {% assign myurl = page.url | split:'/' | pop | last %}
 	{% assign lasturl = page.url | split:'/' | last %}
