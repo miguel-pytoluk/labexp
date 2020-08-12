@@ -1,5 +1,5 @@
 ---
-title: "E assim só vai"
+title: E assim só vai
 author: Bruno Barros
 fotos: Álvaro Bernardi / LabXP
 date: 2020-02-03T00:00:00-00:00
