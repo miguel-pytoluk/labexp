@@ -1,6 +1,6 @@
 # slider zopelar
 - selector: zopelar_slider
-  captions: true
+  captions: false
   images:
     - src: https://noize.com.br/wp-content/uploads/2020/02/1_.png
       alt: 1
